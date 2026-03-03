@@ -1,0 +1,14 @@
+name: k8s CI
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  pyapp-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout 
+        uses: actions/checkout@v4
+      - name: Build Docker Image
+        run: "docker build -t jack2128/gha-pyapp:$GITHUB_SHA . "
