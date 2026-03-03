@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: pyapp
-          image: jack2128/gha-pyapp:$SHORT_SHA
+          image: jack2128/gha-pyapp:b18c7a4
           ports:
             - containerPort: 8000
